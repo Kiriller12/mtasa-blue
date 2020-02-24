@@ -9911,3 +9911,10 @@ bool CStaticFunctionDefinitions::ResetSurfaceInfo(short sSurfaceID)
     }
     return false;
 }
+
+CClientPrimitiveBuffer* CStaticFunctionDefinitions::CreatePrimitiveBuffer(CResource& Resource)
+{
+    CClientPrimitiveBuffer* pPrimitiveBuffer = g_pClientGame->GetPrimitiveBufferManager()->Create();
+    pPrimitiveBuffer->SetParent(Resource.GetResourceDynamicEntity());
+    return pPrimitiveBuffer;
+}

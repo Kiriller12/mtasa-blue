@@ -654,6 +654,20 @@ ADD_ENUM(SURFACE_ADHESION_GROUP_SAND, "sand")
 ADD_ENUM(SURFACE_ADHESION_GROUP_WET, "wet")
 IMPLEMENT_ENUM_END("surface-adhesion-group")
 
+IMPLEMENT_ENUM_BEGIN(ePrimitiveData)
+ADD_ENUM(PRIMITIVE_DATA_XYZ, "xyz")
+ADD_ENUM(PRIMITIVE_DATA_XY, "xy")
+ADD_ENUM(PRIMITIVE_DATA_UV, "uv")
+ADD_ENUM(PRIMITIVE_DATA_DIFFUSE, "diffuse")
+ADD_ENUM(PRIMITIVE_DATA_INDICES16, "16bitindices")
+ADD_ENUM(PRIMITIVE_DATA_INDICES32, "32bitindices")
+IMPLEMENT_ENUM_END("primitive-format")
+
+IMPLEMENT_ENUM_BEGIN(ePrimitiveView)
+ADD_ENUM((ePrimitiveView)0, "perspective")
+ADD_ENUM((ePrimitiveView)1, "orthographic")
+IMPLEMENT_ENUM_END("primitive-view")
+
 //
 // Get best guess at name of userdata type
 //
